@@ -1,0 +1,73 @@
+name: Polaroid
+options:
+  bundleIdPrefix: com.nosleeplab
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    ARCHS: "$(ARCHS_STANDARD)"
+    ONLY_ACTIVE_ARCH: NO
+    ENABLE_HARDENED_RUNTIME: YES
+    CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: YES
+
+targets:
+  Polaroid:
+    type: application
+    platform: macOS
+    sources:
+      - Polaroid
+      - path: Polaroid/Resources/PrivacyInfo.xcprivacy
+        type: file
+    resources:
+      - Polaroid/Resources/Assets.xcassets
+    info:
+      path: Polaroid/Resources/Info.plist
+    entitlements:
+      path: Polaroid/Polaroid.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.files.user-selected.read-write: true
+        com.apple.security.files.bookmarks.app-scope: true
+        com.apple.security.assets.pictures.read-write: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nosleeplab.Polaroid
+        PRODUCT_NAME: Polaroid
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_FILE: Polaroid/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Polaroid/Polaroid.entitlements
+        SWIFT_EMIT_LOC_STRINGS: YES
+  PolaroidTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - PolaroidTests
+    dependencies:
+      - target: Polaroid
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nosleeplab.PolaroidTests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "6.0"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+
+schemes:
+  Polaroid:
+    build:
+      targets:
+        Polaroid: all
+        PolaroidTests: [test]
+    test:
+      config: Debug
+      targets:
+        - PolaroidTests

@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		084D5159DF495564FA56BA01 /* PolaroidRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B8797AF7554B5F562A7BF /* PolaroidRendererTests.swift */; };
+		2F97B891C02FA209EB119C46 /* ScreenshotWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74AEB0F45EA339111978804 /* ScreenshotWatcher.swift */; };
+		402D44F68F2A7DA3D759813D /* PolaroidDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5068D4AAD22722B8A7BB97E /* PolaroidDocumentModel.swift */; };
+		44A4D4DEC67A9D31163DACA3 /* StylePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4974ED4DA07267C7F80067A /* StylePickerView.swift */; };
+		61CBA321BDD0C70E137115E0 /* CaptionEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440B77126BDAD07433173FCF /* CaptionEditor.swift */; };
+		61CFA7E309DC3FBBA93E6849 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE674261A42464AEB94345D /* ContentView.swift */; };
+		626ACB3F5B25A52B581C7187 /* PolaroidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAFA6119B9F0206D70B2C9E /* PolaroidView.swift */; };
+		69B0A54D3F6A92BCCBD86A40 /* ScreenshotWatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3EA1E8E012A52144624B55 /* ScreenshotWatcherTests.swift */; };
+		760986365EBA96EE3AE2DF6E /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A8CD296481BABD95948010 /* AppSettings.swift */; };
+		7A49071BAA19C601F9671062 /* PolaroidStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FB06FFAF446C9522150E9A /* PolaroidStyle.swift */; };
+		7DE669BEDF3502B6D7483B72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD46155DBDDDCFC75D16C4EE /* Assets.xcassets */; };
+		997D0626EE561667FB05374C /* DropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298B387AFCFE985961E2107 /* DropZoneView.swift */; };
+		9DC10D993121B9C00580AEAD /* PolaroidRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E863C616BDBFF9E4CC2DA0 /* PolaroidRenderer.swift */; };
+		BA25AF81BDFFDD64FA6DA75E /* PaperTextureGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383EFD0C7D8ECB38A057FAA /* PaperTextureGenerator.swift */; };
+		C9E3FD743A11855E5B8A64E5 /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69E6F339D06FD1C83D72732 /* Screenshot.swift */; };
+		CE55FA6F50F6A88F7A97C4E9 /* MenuBarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE4A9E3D1DF0F3A01BAAA9B /* MenuBarContent.swift */; };
+		D110FC4D1AA0F72AEBD33C4D /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942BDFECAF6060B7CCB9D028 /* ExportService.swift */; };
+		D396BDBD3C7E2FED9AFFFFE7 /* DevelopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E995FF44CF9A8EDB6EE76F /* DevelopAnimation.swift */; };
+		EFA14E4BC3C110A005027B28 /* PolaroidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEDACF793ED070898C07636 /* PolaroidApp.swift */; };
+		F54BF31079ABDED16D56B95B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB12663A903B0BE8B73D02 /* SettingsView.swift */; };
+		FDF2EE6A084FCF5CBA2A29E6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A51446210A01374C29949 /* PrivacyInfo.xcprivacy */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B50E877A935561EFC831B72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9477151663F7E04D16EBE6EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C23162CA325C053BEA4B32C;
+			remoteInfo = Polaroid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1383EFD0C7D8ECB38A057FAA /* PaperTextureGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperTextureGenerator.swift; sourceTree = "<group>"; };
+		18D15708F57A465DEC03C998 /* Polaroid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Polaroid.entitlements; sourceTree = "<group>"; };
+		20E995FF44CF9A8EDB6EE76F /* DevelopAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopAnimation.swift; sourceTree = "<group>"; };
+		31A8CD296481BABD95948010 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		440B77126BDAD07433173FCF /* CaptionEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionEditor.swift; sourceTree = "<group>"; };
+		444F19922093C0DC10E452E0 /* PolaroidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolaroidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EEDACF793ED070898C07636 /* PolaroidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidApp.swift; sourceTree = "<group>"; };
+		6B3A51446210A01374C29949 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6E3EA1E8E012A52144624B55 /* ScreenshotWatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotWatcherTests.swift; sourceTree = "<group>"; };
+		86E863C616BDBFF9E4CC2DA0 /* PolaroidRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidRenderer.swift; sourceTree = "<group>"; };
+		91E8E1C50B8ED85AC7F69443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		942BDFECAF6060B7CCB9D028 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		9EAFA6119B9F0206D70B2C9E /* PolaroidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidView.swift; sourceTree = "<group>"; };
+		A298B387AFCFE985961E2107 /* DropZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropZoneView.swift; sourceTree = "<group>"; };
+		A5068D4AAD22722B8A7BB97E /* PolaroidDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidDocumentModel.swift; sourceTree = "<group>"; };
+		B5B7173E5059B6793698683C /* Polaroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polaroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C74AEB0F45EA339111978804 /* ScreenshotWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotWatcher.swift; sourceTree = "<group>"; };
+		D4974ED4DA07267C7F80067A /* StylePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylePickerView.swift; sourceTree = "<group>"; };
+		D69E6F339D06FD1C83D72732 /* Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
+		DA2B8797AF7554B5F562A7BF /* PolaroidRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidRendererTests.swift; sourceTree = "<group>"; };
+		DBE4A9E3D1DF0F3A01BAAA9B /* MenuBarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContent.swift; sourceTree = "<group>"; };
+		DD46155DBDDDCFC75D16C4EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAAB12663A903B0BE8B73D02 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F1FB06FFAF446C9522150E9A /* PolaroidStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidStyle.swift; sourceTree = "<group>"; };
+		FEE674261A42464AEB94345D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0323D24B8EC404FF91075E05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31A8CD296481BABD95948010 /* AppSettings.swift */,
+				A5068D4AAD22722B8A7BB97E /* PolaroidDocumentModel.swift */,
+				F1FB06FFAF446C9522150E9A /* PolaroidStyle.swift */,
+				D69E6F339D06FD1C83D72732 /* Screenshot.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0AC2CDE9F373B4B96BCE6743 = {
+			isa = PBXGroup;
+			children = (
+				19EA52152739EBC267A4AE1C /* Polaroid */,
+				CA748B0717714431BCE79E96 /* PolaroidTests */,
+				5DD35D16EFE681543CE8421B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19EA52152739EBC267A4AE1C /* Polaroid */ = {
+			isa = PBXGroup;
+			children = (
+				18D15708F57A465DEC03C998 /* Polaroid.entitlements */,
+				5EEDACF793ED070898C07636 /* PolaroidApp.swift */,
+				9A9F79924672B5AF8C078273 /* Core */,
+				0323D24B8EC404FF91075E05 /* Models */,
+				90BDCEB4137587CA1DC784BB /* Resources */,
+				1D811D878312EA64C2CB8378 /* Views */,
+			);
+			path = Polaroid;
+			sourceTree = "<group>";
+		};
+		1D811D878312EA64C2CB8378 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				440B77126BDAD07433173FCF /* CaptionEditor.swift */,
+				FEE674261A42464AEB94345D /* ContentView.swift */,
+				A298B387AFCFE985961E2107 /* DropZoneView.swift */,
+				DBE4A9E3D1DF0F3A01BAAA9B /* MenuBarContent.swift */,
+				9EAFA6119B9F0206D70B2C9E /* PolaroidView.swift */,
+				EAAB12663A903B0BE8B73D02 /* SettingsView.swift */,
+				D4974ED4DA07267C7F80067A /* StylePickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5DD35D16EFE681543CE8421B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5B7173E5059B6793698683C /* Polaroid.app */,
+				444F19922093C0DC10E452E0 /* PolaroidTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90BDCEB4137587CA1DC784BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD46155DBDDDCFC75D16C4EE /* Assets.xcassets */,
+				91E8E1C50B8ED85AC7F69443 /* Info.plist */,
+				6B3A51446210A01374C29949 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9A9F79924672B5AF8C078273 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				20E995FF44CF9A8EDB6EE76F /* DevelopAnimation.swift */,
+				942BDFECAF6060B7CCB9D028 /* ExportService.swift */,
+				1383EFD0C7D8ECB38A057FAA /* PaperTextureGenerator.swift */,
+				86E863C616BDBFF9E4CC2DA0 /* PolaroidRenderer.swift */,
+				C74AEB0F45EA339111978804 /* ScreenshotWatcher.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CA748B0717714431BCE79E96 /* PolaroidTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA2B8797AF7554B5F562A7BF /* PolaroidRendererTests.swift */,
+				6E3EA1E8E012A52144624B55 /* ScreenshotWatcherTests.swift */,
+			);
+			path = PolaroidTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C23162CA325C053BEA4B32C /* Polaroid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBD1294FB41F2E7676142C7C /* Build configuration list for PBXNativeTarget "Polaroid" */;
+			buildPhases = (
+				900CE270E04AABF20590BA9B /* Sources */,
+				68B53FAA693BCF6C388BBB5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Polaroid;
+			packageProductDependencies = (
+			);
+			productName = Polaroid;
+			productReference = B5B7173E5059B6793698683C /* Polaroid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70F077610F0F1F11369C378E /* PolaroidTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D8CA8E0420E947D0B6B6C96 /* Build configuration list for PBXNativeTarget "PolaroidTests" */;
+			buildPhases = (
+				952DD8781C8947D00DB69C3B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				368C791B75E3119A5D7956C7 /* PBXTargetDependency */,
+			);
+			name = PolaroidTests;
+			packageProductDependencies = (
+			);
+			productName = PolaroidTests;
+			productReference = 444F19922093C0DC10E452E0 /* PolaroidTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9477151663F7E04D16EBE6EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					1C23162CA325C053BEA4B32C = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1CFCC28AF1F3CF750416FB44 /* Build configuration list for PBXProject "Polaroid" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 0AC2CDE9F373B4B96BCE6743;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5DD35D16EFE681543CE8421B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C23162CA325C053BEA4B32C /* Polaroid */,
+				70F077610F0F1F11369C378E /* PolaroidTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68B53FAA693BCF6C388BBB5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DE669BEDF3502B6D7483B72 /* Assets.xcassets in Resources */,
+				FDF2EE6A084FCF5CBA2A29E6 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		900CE270E04AABF20590BA9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760986365EBA96EE3AE2DF6E /* AppSettings.swift in Sources */,
+				61CBA321BDD0C70E137115E0 /* CaptionEditor.swift in Sources */,
+				61CFA7E309DC3FBBA93E6849 /* ContentView.swift in Sources */,
+				D396BDBD3C7E2FED9AFFFFE7 /* DevelopAnimation.swift in Sources */,
+				997D0626EE561667FB05374C /* DropZoneView.swift in Sources */,
+				D110FC4D1AA0F72AEBD33C4D /* ExportService.swift in Sources */,
+				CE55FA6F50F6A88F7A97C4E9 /* MenuBarContent.swift in Sources */,
+				BA25AF81BDFFDD64FA6DA75E /* PaperTextureGenerator.swift in Sources */,
+				EFA14E4BC3C110A005027B28 /* PolaroidApp.swift in Sources */,
+				402D44F68F2A7DA3D759813D /* PolaroidDocumentModel.swift in Sources */,
+				9DC10D993121B9C00580AEAD /* PolaroidRenderer.swift in Sources */,
+				7A49071BAA19C601F9671062 /* PolaroidStyle.swift in Sources */,
+				626ACB3F5B25A52B581C7187 /* PolaroidView.swift in Sources */,
+				C9E3FD743A11855E5B8A64E5 /* Screenshot.swift in Sources */,
+				2F97B891C02FA209EB119C46 /* ScreenshotWatcher.swift in Sources */,
+				F54BF31079ABDED16D56B95B /* SettingsView.swift in Sources */,
+				44A4D4DEC67A9D31163DACA3 /* StylePickerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952DD8781C8947D00DB69C3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				084D5159DF495564FA56BA01 /* PolaroidRendererTests.swift in Sources */,
+				69B0A54D3F6A92BCCBD86A40 /* ScreenshotWatcherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		368C791B75E3119A5D7956C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C23162CA325C053BEA4B32C /* Polaroid */;
+			targetProxy = 5B50E877A935561EFC831B72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		38489FDC466B3A6B855F5D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nosleeplab.PolaroidTests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Polaroid.app/Contents/MacOS/Polaroid";
+			};
+			name = Release;
+		};
+		4D83B7BAC22A24DB81988C55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		5DCEC9ED07519E2DB5F6C271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		B056CCB7FBD47523D92C5AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Polaroid/Polaroid.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Polaroid/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nosleeplab.Polaroid;
+				PRODUCT_NAME = Polaroid;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		D1EED197974F7811B3ED86CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nosleeplab.PolaroidTests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Polaroid.app/Contents/MacOS/Polaroid";
+			};
+			name = Debug;
+		};
+		E231A43D95844E804DA6434A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Polaroid/Polaroid.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Polaroid/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nosleeplab.Polaroid;
+				PRODUCT_NAME = Polaroid;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D8CA8E0420E947D0B6B6C96 /* Build configuration list for PBXNativeTarget "PolaroidTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1EED197974F7811B3ED86CA /* Debug */,
+				38489FDC466B3A6B855F5D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1CFCC28AF1F3CF750416FB44 /* Build configuration list for PBXProject "Polaroid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D83B7BAC22A24DB81988C55 /* Debug */,
+				5DCEC9ED07519E2DB5F6C271 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BBD1294FB41F2E7676142C7C /* Build configuration list for PBXNativeTarget "Polaroid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B056CCB7FBD47523D92C5AB8 /* Debug */,
+				E231A43D95844E804DA6434A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9477151663F7E04D16EBE6EA /* Project object */;
+}
