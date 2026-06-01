@@ -103,7 +103,7 @@ xcodebuild -project Polaroid.xcodeproj \
 
 Current verification status:
 
-- Unit tests: 11 tests, 0 failures
+- Unit tests: 21 tests, 0 failures
 - Release build: passing
 - Static analysis: passing
 - Universal binary: `x86_64 arm64`
