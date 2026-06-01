@@ -153,3 +153,49 @@ What remains (all gated on Mark or out of scope for an unattended run):
   driven headlessly here.
 - Optional polish that was explicitly out of scope for safety: notarization/distribution
   config, and confirming the nosleeplab.com support URL is live.
+
+## QA Verification
+
+Verified by independent QA reviewer (not the build agent) on 2026-06-01.
+
+### Commands run
+
+```
+xcodegen generate
+xcodebuild ... Debug build  → BUILD SUCCEEDED
+xcodebuild ... test         → Executed 21 tests, with 0 failures
+xcodebuild ... Release build → BUILD SUCCEEDED
+xcodebuild ... analyze      → ANALYZE SUCCEEDED
+lipo -info Polaroid.app/Contents/MacOS/Polaroid
+plutil -p Polaroid.app/Contents/Info.plist (key spot-check)
+```
+
+### Results
+
+- Debug build: BUILD SUCCEEDED, zero errors, zero warnings.
+- Release build: BUILD SUCCEEDED, zero errors, zero warnings.
+- Tests: 21/21 pass (AppSettingsTests 6, ExportServiceTests 4, PolaroidRendererTests 9, ScreenshotWatcherTests 2). Counts match the worklog claim exactly.
+- Static analysis: ANALYZE SUCCEEDED, no findings.
+- Universal binary confirmed: x86_64 + arm64 fat binary in the Release product.
+- Built Info.plist values independently verified: CFBundleShortVersionString=1.0.0, CFBundleVersion=1, LSApplicationCategoryType=public.app-category.graphics-design, LSMinimumSystemVersion=14.0, NSHumanReadableCopyright set.
+- project.yml info.properties block present and correct — XcodeGen is the source of truth for all plist keys.
+- generate_screenshots.swift uses explicit NSBitmapImageRep (not lockFocus) — deterministic 2880x1800 fix verified in source.
+
+### Discrepancies found
+
+None. All build-agent claims check out:
+- Version metadata fix is real and verified in the built bundle.
+- Screenshot determinism fix is implemented correctly in source.
+- 21 tests exist and all pass.
+- CLAUDE.md and Scripts/verify.sh are present.
+- Universal binary is genuine.
+
+### No fix applied
+
+No build-breaking issues found; no commits were needed.
+
+### Remaining issues (not introduced by overnight agent)
+
+- No Apple Developer account — cannot sign, archive, or submit to the Mac App Store.
+- nosleeplab.com support/marketing URL (referenced in metadata.md and SettingsView) is unverified.
+- Interactive GUI flow (drop image → develop animation → caption → export) was not driven headlessly; unit tests cover the logic but a manual smoke-test on Mark's machine is recommended before submission.
