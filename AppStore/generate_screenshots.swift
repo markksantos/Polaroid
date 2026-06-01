@@ -18,20 +18,38 @@ let scenes: [(String, String, NSColor)] = [
 ]
 
 for (index, scene) in scenes.enumerated() {
-    let image = NSImage(size: size)
-    image.lockFocus()
+    // Render into an explicit 1x bitmap so output is always exactly `size`
+    // in pixels, regardless of the display's backing scale factor.
+    guard let bitmap = NSBitmapImageRep(
+        bitmapDataPlanes: nil,
+        pixelsWide: Int(size.width),
+        pixelsHigh: Int(size.height),
+        bitsPerSample: 8,
+        samplesPerPixel: 4,
+        hasAlpha: true,
+        isPlanar: false,
+        colorSpaceName: .deviceRGB,
+        bytesPerRow: 0,
+        bitsPerPixel: 0
+    ) else {
+        fatalError("Could not allocate bitmap for screenshot \(index + 1)")
+    }
+
+    guard let context = NSGraphicsContext(bitmapImageRep: bitmap) else {
+        fatalError("Could not create graphics context for screenshot \(index + 1)")
+    }
+
+    let previous = NSGraphicsContext.current
+    NSGraphicsContext.current = context
+    defer { NSGraphicsContext.current = previous }
 
     drawBackground(size: size, accent: scene.2)
     drawWindow(size: size, index: index, title: scene.0, subtitle: scene.1, accent: scene.2)
 
-    image.unlockFocus()
+    context.flushGraphics()
 
-    guard
-        let tiff = image.tiffRepresentation,
-        let bitmap = NSBitmapImageRep(data: tiff),
-        let data = bitmap.representation(using: .png, properties: [:])
-    else {
-        fatalError("Could not render screenshot \(index + 1)")
+    guard let data = bitmap.representation(using: .png, properties: [:]) else {
+        fatalError("Could not encode screenshot \(index + 1) as PNG")
     }
 
     let url = outputDirectory.appendingPathComponent(String(format: "%02d-polaroid.png", index + 1))
