@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		084D5159DF495564FA56BA01 /* PolaroidRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B8797AF7554B5F562A7BF /* PolaroidRendererTests.swift */; };
 		2F97B891C02FA209EB119C46 /* ScreenshotWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74AEB0F45EA339111978804 /* ScreenshotWatcher.swift */; };
+		3083C9602FFC594E67702911 /* AppSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E172AC648F0227BEB6EE2B1 /* AppSettingsTests.swift */; };
 		402D44F68F2A7DA3D759813D /* PolaroidDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5068D4AAD22722B8A7BB97E /* PolaroidDocumentModel.swift */; };
 		44A4D4DEC67A9D31163DACA3 /* StylePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4974ED4DA07267C7F80067A /* StylePickerView.swift */; };
 		61CBA321BDD0C70E137115E0 /* CaptionEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440B77126BDAD07433173FCF /* CaptionEditor.swift */; };
@@ -25,6 +26,7 @@
 		CE55FA6F50F6A88F7A97C4E9 /* MenuBarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE4A9E3D1DF0F3A01BAAA9B /* MenuBarContent.swift */; };
 		D110FC4D1AA0F72AEBD33C4D /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942BDFECAF6060B7CCB9D028 /* ExportService.swift */; };
 		D396BDBD3C7E2FED9AFFFFE7 /* DevelopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E995FF44CF9A8EDB6EE76F /* DevelopAnimation.swift */; };
+		E9C3979A44865059E113930E /* ExportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35F24FC74F495CB3B75C078 /* ExportServiceTests.swift */; };
 		EFA14E4BC3C110A005027B28 /* PolaroidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEDACF793ED070898C07636 /* PolaroidApp.swift */; };
 		F54BF31079ABDED16D56B95B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB12663A903B0BE8B73D02 /* SettingsView.swift */; };
 		FDF2EE6A084FCF5CBA2A29E6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A51446210A01374C29949 /* PrivacyInfo.xcprivacy */; };
@@ -53,6 +55,7 @@
 		86E863C616BDBFF9E4CC2DA0 /* PolaroidRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidRenderer.swift; sourceTree = "<group>"; };
 		91E8E1C50B8ED85AC7F69443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		942BDFECAF6060B7CCB9D028 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		9E172AC648F0227BEB6EE2B1 /* AppSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsTests.swift; sourceTree = "<group>"; };
 		9EAFA6119B9F0206D70B2C9E /* PolaroidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidView.swift; sourceTree = "<group>"; };
 		A298B387AFCFE985961E2107 /* DropZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropZoneView.swift; sourceTree = "<group>"; };
 		A5068D4AAD22722B8A7BB97E /* PolaroidDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidDocumentModel.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		DD46155DBDDDCFC75D16C4EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAAB12663A903B0BE8B73D02 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F1FB06FFAF446C9522150E9A /* PolaroidStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidStyle.swift; sourceTree = "<group>"; };
+		F35F24FC74F495CB3B75C078 /* ExportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportServiceTests.swift; sourceTree = "<group>"; };
 		FEE674261A42464AEB94345D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +154,8 @@
 		CA748B0717714431BCE79E96 /* PolaroidTests */ = {
 			isa = PBXGroup;
 			children = (
+				9E172AC648F0227BEB6EE2B1 /* AppSettingsTests.swift */,
+				F35F24FC74F495CB3B75C078 /* ExportServiceTests.swift */,
 				DA2B8797AF7554B5F562A7BF /* PolaroidRendererTests.swift */,
 				6E3EA1E8E012A52144624B55 /* ScreenshotWatcherTests.swift */,
 			);
@@ -270,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3083C9602FFC594E67702911 /* AppSettingsTests.swift in Sources */,
+				E9C3979A44865059E113930E /* ExportServiceTests.swift in Sources */,
 				084D5159DF495564FA56BA01 /* PolaroidRendererTests.swift in Sources */,
 				69B0A54D3F6A92BCCBD86A40 /* ScreenshotWatcherTests.swift in Sources */,
 			);

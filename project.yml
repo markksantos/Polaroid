@@ -29,6 +29,12 @@ targets:
       - Polaroid/Resources/Assets.xcassets
     info:
       path: Polaroid/Resources/Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSApplicationCategoryType: public.app-category.graphics-design
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSHumanReadableCopyright: Copyright © 2026 Mark Studios. All rights reserved.
     entitlements:
       path: Polaroid/Polaroid.entitlements
       properties:
