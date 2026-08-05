@@ -23,3 +23,6 @@ Package.resolved
 # Local environment
 .env
 .env.*
+
+# Xcode derived data (alt naming)
+DerivedDataCap/
