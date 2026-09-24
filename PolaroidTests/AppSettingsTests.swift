@@ -33,9 +33,9 @@ final class AppSettingsTests: XCTestCase {
         let originalPattern = settings.fileNamingPattern
         defer { settings.fileNamingPattern = originalPattern }
 
-        settings.fileNamingPattern = "Polaroid yyyy-MM-dd HH.mm.ss"
+        settings.fileNamingPattern = "Instant Frame yyyy-MM-dd HH.mm.ss"
         let preview = settings.filenamePreview
-        XCTAssertTrue(preview.hasPrefix("Polaroid "))
+        XCTAssertTrue(preview.hasPrefix("Instant Frame "))
         XCTAssertTrue(preview.hasSuffix(".png"))
     }
 
@@ -45,7 +45,7 @@ final class AppSettingsTests: XCTestCase {
         defer { settings.fileNamingPattern = originalPattern }
 
         settings.fileNamingPattern = ""
-        XCTAssertEqual(settings.fileNamingPattern, "Polaroid yyyy-MM-dd HH.mm.ss")
+        XCTAssertEqual(settings.fileNamingPattern, "Instant Frame yyyy-MM-dd HH.mm.ss")
     }
 
     func testResolvedSaveDirectoryFallsBackWithoutBookmark() {
@@ -55,7 +55,7 @@ final class AppSettingsTests: XCTestCase {
 
         settings.saveLocationBookmark = Data()
         XCTAssertEqual(settings.resolvedSaveDirectory(), settings.defaultSaveDirectory)
-        XCTAssertTrue(settings.defaultSaveDirectory.path.hasSuffix("Polaroids"))
+        XCTAssertTrue(settings.defaultSaveDirectory.path.hasSuffix("Pictures/Instant Frame"))
     }
 
     func testResetToDefaultsRestoresKnownValues() {

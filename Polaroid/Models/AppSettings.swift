@@ -88,7 +88,7 @@ final class AppSettings {
     private var storedExportSize: ExportSize
 
     @ObservationIgnored
-    @UserDefaultBacked("fileNamingPattern", default: "Polaroid yyyy-MM-dd HH.mm.ss")
+    @UserDefaultBacked("fileNamingPattern", default: "Instant Frame yyyy-MM-dd HH.mm.ss")
     private var storedFileNamingPattern: String
 
     @ObservationIgnored
@@ -175,7 +175,7 @@ final class AppSettings {
 
     var fileNamingPattern: String {
         get { storedFileNamingPattern }
-        set { storedFileNamingPattern = newValue.isEmpty ? "Polaroid yyyy-MM-dd HH.mm.ss" : newValue }
+        set { storedFileNamingPattern = newValue.isEmpty ? "Instant Frame yyyy-MM-dd HH.mm.ss" : newValue }
     }
 
     var saveLocationBookmark: Data {
@@ -194,17 +194,19 @@ final class AppSettings {
     }
 
     var defaultSaveDirectory: URL {
-        FileManager.default.urls(for: .picturesDirectory, in: .userDomainMask).first?
-            .appendingPathComponent("Polaroids", isDirectory: true)
-            ?? URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Pictures/Polaroids", isDirectory: true)
+        let pictures = FileManager.default.urls(for: .picturesDirectory, in: .userDomainMask).first
+            ?? URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Pictures", isDirectory: true)
+        // Sandboxed, this is the container's Pictures symlink, whose path contains the bundle ID.
+        // Resolve it so Settings and "Copy path" show ~/Pictures/Instant Frame.
+        return pictures.resolvingSymlinksInPath().appendingPathComponent("Instant Frame", isDirectory: true)
     }
 
     var filenamePreview: String {
         let formatter = DateFormatter()
-        formatter.dateFormat = fileNamingPattern.replacingOccurrences(of: "Polaroid ", with: "'Polaroid' ")
+        formatter.dateFormat = fileNamingPattern.replacingOccurrences(of: "Instant Frame ", with: "'Instant Frame' ")
         formatter.locale = Locale(identifier: "en_US_POSIX")
         let preview = formatter.string(from: Date(timeIntervalSince1970: 1_767_225_600))
-        return preview.isEmpty ? "Polaroid 2026-01-01 00.00.00.png" : "\(preview).png"
+        return preview.isEmpty ? "Instant Frame 2026-01-01 00.00.00.png" : "\(preview).png"
     }
 
     func resolvedSaveDirectory() -> URL {
@@ -272,6 +274,6 @@ final class AppSettings {
         skipDevelopAnimation = false
         showDateStamp = true
         exportSize = .highRes1920
-        fileNamingPattern = "Polaroid yyyy-MM-dd HH.mm.ss"
+        fileNamingPattern = "Instant Frame yyyy-MM-dd HH.mm.ss"
     }
 }

@@ -140,10 +140,10 @@ struct SettingsView: View {
                 Button("Use current style as defaults") {
                     model.useCurrentStyleAsDefaults()
                 }
-                Button("Apply defaults to current Polaroid") {
+                Button("Apply defaults to current print") {
                     model.applyDefaultStyle()
                 }
-                Button("Clear recent Polaroids") {
+                Button("Clear recent prints") {
                     model.clearRecentPolaroids()
                 }
                 Button("Reset all settings") {

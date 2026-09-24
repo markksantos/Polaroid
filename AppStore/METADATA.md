@@ -1,10 +1,10 @@
-# Polaroid (listing name TBD) — Mac App Store metadata
+# Instant Frame — Mac App Store metadata
 
 Drafted 2026-09-22 from the source code and README on branch `appstore-kit`. Character counts were computed by script, and the script fails if any field is over Apple's limit. **⚠ MARK'S DECISION** marks a field only Mark can settle.
 
 | Field | Value | Chars / limit |
 |---|---|---|
-| App name | Instant Frame **⚠ MARK'S DECISION — the current name `Polaroid` can't ship** | 13 / 30 |
+| App name | Instant Frame (Mark's decision, 2026-09-24) | 13 / 30 |
 | Subtitle | Screenshots into instant film | 29 / 30 |
 | Bundle ID | `com.nosleeplab.Polaroid` (the bundle ID never appears in the store, so it can stay) | — |
 | Version / build | 1.0.0 (1) — from project.yml | — |
@@ -15,10 +15,10 @@ Drafted 2026-09-22 from the source code and README on branch `appstore-kit`. Cha
 | Copyright | 2026 Mark Studios LLC | — |
 | Support URL | https://nosleeplab.com/support (live, general NoSleepLab support page with a contact email) | — |
 | Privacy Policy URL | https://nosleeplab.com/privacy (live, general NoSleepLab policy covering all its apps) | — |
-| Marketing URL (optional) | NOT YET PUBLISHED - needs a page (`/apps/polaroid` returns 404) | — |
+| Marketing URL (optional) | NOT YET PUBLISHED - needs a page (no NoSleepLab page exists for this app) | — |
 | Minimum macOS | 14.0 · universal binary (x86_64 + arm64, confirmed with lipo on the Release build) | — |
 
-**🔴 About the name:** **"Polaroid" is a registered trademark** of Polaroid B.V. An App Store listing named Polaroid, or using the word in the subtitle or keywords, is a Guideline 5.2.1 (intellectual property) rejection, and the trademark owner could file a takedown. `Instant Frame` is a **proposed** name: an iTunes Search API check on 2026-09-22 found no exact match on the Mac or iOS store (only long names that contain the phrase), but only creating the App Store Connect record confirms it's free. `Shotframe` is **taken** (iOS). The description below uses `Instant Frame`, so if Mark picks a different name, swap it in. **The name is also in the app itself** (`PRODUCT_NAME: Polaroid`, the window title, about 30 UI strings such as "New Polaroid…", "Recent Polaroids" and "Quit Polaroid", the default save folder `~/Pictures/Polaroids`, and the file name pattern `Polaroid yyyy-MM-dd…`), so renaming is a code change. See CHECKLIST.
+**About the name:** Mark chose `Instant Frame` on 2026-09-24. The app's old working name is a registered trademark, so using it in the name, subtitle, keywords, screenshots or the binary is a Guideline 5.2.1 (intellectual property) rejection, and the owner could file a takedown. Name check on 2026-09-24: the iTunes Search API Mac store query (`entity=macSoftware`) returned 135 results and none contains "Instant Frame". The iOS query (`entity=software`) returned HTTP 503 on every retry, so a web search of apps.apple.com stood in: it found only longer names such as "Vintage Photo Frames - Instant Frame Maker & Photo Editor", and "SnapFrame", once listed as "Instant Frame Maker". There's no exact match, but only creating the App Store Connect record confirms a name is free. `Shotframe` is **taken** (iOS). **The app itself was renamed on 2026-09-24** (`PRODUCT_NAME`, the window title, the menu bar item, the menus, every UI string, the default save folder `~/Pictures/Instant Frame` and the file name pattern `Instant Frame yyyy-MM-dd HH.mm.ss`). See CHECKLIST.
 
 ## Promotional text (156 / 170)
 
@@ -57,7 +57,7 @@ PRIVATE BY DESIGN
 No accounts, no analytics and no network access. Your images stay on your Mac.
 ```
 
-**Deliberately left out of the copy: "auto-watch Desktop screenshots"**, even though the README leads with it. With the app's real entitlements, a sandbox probe was **denied** access to `~/Desktop` (errno 1). The app never asks for the folder on first run, so on a fresh install the watcher fails without any message, and App Review would find a headline feature that does nothing. There's also a code bug: after the user picks a watch folder, the saved bookmark is resolved on the next launch but `startAccessingSecurityScopedResource()` is never called for the watcher. So even once the user chooses the folder, watching should stop after the next relaunch (found by reading the code; not verified at runtime). **Put the claim back only after that fix** (see CHECKLIST). The old `AppStore/metadata.md` (now renamed to this file, and still in git history) claimed it, and also used "Polaroid" in the name and keywords.
+**Deliberately left out of the copy: "auto-watch Desktop screenshots"**, even though the README leads with it. With the app's real entitlements, a sandbox probe was **denied** access to `~/Desktop` (errno 1). The app never asks for the folder on first run, so on a fresh install the watcher fails without any message, and App Review would find a headline feature that does nothing. There's also a code bug: after the user picks a watch folder, the saved bookmark is resolved on the next launch but `startAccessingSecurityScopedResource()` is never called for the watcher. So even once the user chooses the folder, watching should stop after the next relaunch (found by reading the code; not verified at runtime). **Put the claim back only after that fix** (see CHECKLIST). The old `AppStore/metadata.md` (now renamed to this file, and still in git history) claimed it, and also used the trademarked old name in the name and keywords.
 
 ## Keywords (97 / 100)
 
@@ -65,13 +65,13 @@ No accounts, no analytics and no network access. Your images stay on your Mac.
 instant film,photo frame,screenshot,caption,handwriting,vintage,retro,paper,snapshot,print,border
 ```
 
-No spaces after commas. No competitor or trademarked names (checked against: Polaroid, Instax, Fujifilm, Kodak, Instagram, Apple, Desktop Polaroids). Leaves out words Apple already indexes from the name and category.
+No spaces after commas. No competitor or trademarked names (checked against: the trademarked old name and a competing Mac app that uses it, Instax, Fujifilm, Kodak, Instagram, Apple). Leaves out words Apple already indexes from the name and category.
 
 ## URLs — what was checked (curl, 2026-09-22)
 
 - `https://nosleeplab.com/privacy` returns **200**. The general policy says the apps collect no personal data, have no analytics, no ads, and keep data local. That matches this app.
 - `https://nosleeplab.com/support` returns **200**. It has a contact email (Guideline 1.5 is met).
-- `https://nosleeplab.com/apps/polaroid` and `/polaroid` return **404**. `sitemap.xml` lists 23 app pages and none of them is this app. **No app-specific page exists yet.** When one is made, don't title it "Polaroid".
+- The old-name app paths (`/apps/<old name>` and `/<old name>`) return **404**. `sitemap.xml` lists 23 app pages and none of them is this app. **No app-specific page exists yet.** When one is made, title it Instant Frame and keep the old name out of its title and URL.
 - The only link inside the app is the NoSleepLab link in Settings (`https://nosleeplab.com`), which opens in the browser when clicked.
 - The pages are branded **NoSleepLab**, the bundle ID is `com.nosleeplab.*`, and the copyright is **Mark Studios LLC**. Confirm they're consistent (**⚠ MARK'S DECISION**).
 
@@ -92,7 +92,7 @@ Every answer is the 'None' / 'No' option, which gives a **4+** rating:
 
 - **No network:** the entitlements are `app-sandbox`, `files.user-selected.read-write`, `files.bookmarks.app-scope` and `assets.pictures.read-write`. There's no `network.client`. A sandbox probe signed with these exact entitlements got `BLOCKED -1003` on an HTTPS request.
 - **No SDKs, analytics or accounts:** the project has no Swift packages, and a grep found no `URLSession`. `PrivacyInfo.xcprivacy` has `NSPrivacyTracking=false` and no collected data types, and the file is inside the built bundle.
-- **Files:** it reads images the user opens, drops or pastes, and writes PNGs to `~/Pictures/Polaroids` by default. The probe confirmed Pictures access works in the sandbox. Recent-item thumbnails go in the app's own container.
+- **Files:** it reads images the user opens, drops or pastes, and writes PNGs to `~/Pictures/Instant Frame` by default, creating the folder on the first save. On 2026-09-24 a probe ran the app's own save code with the app's exact entitlements in a fresh container: it created the folder and wrote the PNG, and `~/Developer` was denied as a control. Recent-item thumbnails go in the app's own container.
 - **⚠ Privacy-manifest reason code to fix:** the manifest declares file-timestamp reason `C617.1`, which only covers files *inside the app container*. The app reads `creationDate` of **user-picked images** and **shows it** as the date stamp, so the matching reasons are `3B52.1` (user-granted files) and `DDA9.1` (displayed to the user). Upload validation won't catch this. It's a correctness fix for whoever owns the code.
 
 ## Export compliance
@@ -101,7 +101,7 @@ Every answer is the 'None' / 'No' option, which gives a **4+** rating:
 
 ## ⚠ Decisions only Mark can make
 
-- **🔴 App name** (required): the name can't be "Polaroid". `Instant Frame` is proposed; pick one before the App Store Connect record is created.
+- **App name**: decided on 2026-09-24. It's `Instant Frame`, and the app is renamed to match.
 - **Price**: the README suggests USD 9 one-time.
 - **Secondary category**: Photography, or none.
 - **Brand consistency**: NoSleepLab site and bundle prefix vs the Mark Studios LLC copyright.

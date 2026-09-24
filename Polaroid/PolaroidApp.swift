@@ -15,14 +15,14 @@ struct PolaroidApp: App {
     }
 
     var body: some Scene {
-        WindowGroup("Polaroid", id: "main") {
+        WindowGroup("Instant Frame", id: "main") {
             ContentView(model: model)
         }
         .defaultSize(width: 980, height: 780)
         .windowResizability(.contentMinSize)
         .commands {
             CommandGroup(replacing: .newItem) {
-                Button("New Polaroid...") {
+                Button("New Print...") {
                     model.openImagePanel()
                 }
                 .keyboardShortcut("n", modifiers: .command)
@@ -35,7 +35,7 @@ struct PolaroidApp: App {
         .defaultSize(width: 560, height: 620)
         .windowResizability(.contentSize)
 
-        MenuBarExtra("Polaroid", systemImage: "camera.viewfinder") {
+        MenuBarExtra("Instant Frame", systemImage: "camera.viewfinder") {
             MenuBarContent(model: model)
         }
         .menuBarExtraStyle(.window)

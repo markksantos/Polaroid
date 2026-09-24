@@ -51,9 +51,9 @@ struct ContentView: View {
                 Button {
                     model.openImagePanel()
                 } label: {
-                    Label("New Polaroid", systemImage: "photo.badge.plus")
+                    Label("New Print", systemImage: "photo.badge.plus")
                 }
-                .help("New Polaroid")
+                .help("New Print")
 
                 Button {
                     model.pasteImageFromClipboard()
@@ -162,7 +162,7 @@ struct ContentView: View {
                     Button("Open Save Folder") { model.openSaveFolder() }
                     Button("Copy Last Export Path") { model.copyLastExportPath() }
                     Divider()
-                    Button("Remove Current Polaroid") { model.removeCurrentPolaroid() }
+                    Button("Remove Current Print") { model.removeCurrentPolaroid() }
                     Divider()
                     Button(model.isWatcherPausedForSession ? "Resume Desktop Watcher" : "Pause Desktop Watcher") {
                         if model.isWatcherPausedForSession {

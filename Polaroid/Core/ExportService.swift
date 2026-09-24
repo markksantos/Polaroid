@@ -11,7 +11,7 @@ enum ExportError: LocalizedError, Equatable {
     var errorDescription: String? {
         switch self {
         case .cannotCreatePNG:
-            "Could not create a PNG from this Polaroid."
+            "Could not create a PNG from this print."
         case .cannotCreateDirectory(let url):
             "Could not create \(url.path)."
         case .cannotWrite(let url):
@@ -19,7 +19,7 @@ enum ExportError: LocalizedError, Equatable {
         case .cannotReadClipboard:
             "The clipboard does not contain an image."
         case .noImage:
-            "There is no Polaroid to export."
+            "There is no print to export."
         }
     }
 }
@@ -159,7 +159,7 @@ final class ExportService {
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
         pasteboard.writeObjects([output.image])
-        pasteboard.setString("Polaroid.png", forType: .string)
+        pasteboard.setString("Instant Frame.png", forType: .string)
         return .success(())
     }
 
@@ -233,12 +233,12 @@ final class ExportService {
 
     private func uniqueOutputURL(in directory: URL, pattern: String, date: Date) -> URL {
         let formatter = DateFormatter()
-        formatter.dateFormat = pattern.replacingOccurrences(of: "Polaroid ", with: "'Polaroid' ")
+        formatter.dateFormat = pattern.replacingOccurrences(of: "Instant Frame ", with: "'Instant Frame' ")
         formatter.locale = Locale(identifier: "en_US_POSIX")
 
         var baseName = formatter.string(from: date)
         if baseName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            baseName = "Polaroid \(Self.filenameDateFormatter.string(from: date))"
+            baseName = "Instant Frame \(Self.filenameDateFormatter.string(from: date))"
         }
 
         var candidate = directory.appendingPathComponent(baseName).appendingPathExtension("png")

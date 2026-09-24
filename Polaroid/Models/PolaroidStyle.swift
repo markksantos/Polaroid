@@ -203,7 +203,7 @@ enum ExportFrameMode: String, CaseIterable, Codable, Identifiable, Sendable {
 
     var displayName: String {
         switch self {
-        case .polaroid: "Polaroid"
+        case .polaroid: "Full frame"
         case .photoOnly: "Photo only"
         }
     }

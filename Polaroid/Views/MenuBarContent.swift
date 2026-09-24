@@ -11,7 +11,7 @@ struct MenuBarContent: View {
                 openMainWindow()
                 model.openImagePanel()
             } label: {
-                Label("New Polaroid...", systemImage: "photo.badge.plus")
+                Label("New Print...", systemImage: "photo.badge.plus")
             }
             .keyboardShortcut("n", modifiers: .command)
 
@@ -32,7 +32,7 @@ struct MenuBarContent: View {
             if !model.settings.recentPolaroids.isEmpty {
                 Divider()
 
-                Text("Recent Polaroids")
+                Text("Recent Prints")
                     .font(.caption)
                     .foregroundStyle(.secondary)
 
@@ -63,7 +63,7 @@ struct MenuBarContent: View {
                     }
                 }
 
-                Button("Clear Recent Polaroids") {
+                Button("Clear Recent Prints") {
                     model.clearRecentPolaroids()
                 }
             }
@@ -93,7 +93,7 @@ struct MenuBarContent: View {
             Button {
                 NSApplication.shared.terminate(nil)
             } label: {
-                Label("Quit Polaroid", systemImage: "power")
+                Label("Quit Instant Frame", systemImage: "power")
             }
         }
         .padding(14)

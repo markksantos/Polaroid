@@ -83,7 +83,7 @@ final class ExportServiceTests: XCTestCase {
     }
 
     func testExportErrorMessagesAreUserReadable() {
-        XCTAssertEqual(ExportError.noImage.errorDescription, "There is no Polaroid to export.")
+        XCTAssertEqual(ExportError.noImage.errorDescription, "There is no print to export.")
         XCTAssertEqual(ExportError.cannotReadClipboard.errorDescription, "The clipboard does not contain an image.")
         XCTAssertNotNil(ExportError.cannotWrite(URL(fileURLWithPath: "/tmp/x.png")).errorDescription)
     }

@@ -309,7 +309,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nosleeplab.PolaroidTests;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 6.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Polaroid.app/Contents/MacOS/Polaroid";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instant Frame.app/Contents/MacOS/Instant Frame";
 			};
 			name = Release;
 		};
@@ -456,7 +456,8 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nosleeplab.Polaroid;
-				PRODUCT_NAME = Polaroid;
+				PRODUCT_MODULE_NAME = Polaroid;
+				PRODUCT_NAME = "Instant Frame";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -477,7 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nosleeplab.PolaroidTests;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 6.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Polaroid.app/Contents/MacOS/Polaroid";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instant Frame.app/Contents/MacOS/Instant Frame";
 			};
 			name = Debug;
 		};
@@ -496,7 +497,8 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nosleeplab.Polaroid;
-				PRODUCT_NAME = Polaroid;
+				PRODUCT_MODULE_NAME = Polaroid;
+				PRODUCT_NAME = "Instant Frame";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};

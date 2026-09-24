@@ -10,10 +10,10 @@ let size = CGSize(width: 2880, height: 1800)
 
 let scenes: [(String, String, NSColor)] = [
     ("Desktop screenshots become instant film", "Auto-watch Desktop catches new screenshots and starts the develop animation.", NSColor(hex: 0xA84636)),
-    ("Write it like a real Polaroid", "Tap the bottom border, add a caption, and choose the ink.", NSColor(hex: 0x2C5530)),
+    ("Write on it like a real instant print", "Tap the bottom border, add a caption, and choose the ink.", NSColor(hex: 0x2C5530)),
     ("Paper with actual texture", "Clean white, aged cream, worn, and cool gray are generated locally.", NSColor(hex: 0x6B8FB5)),
     ("Save, copy, or share in seconds", "Export a polished PNG to Pictures, clipboard, or the macOS share sheet.", NSColor(hex: 0x1B3A5C)),
-    ("Recent Polaroids in the menu bar", "Reopen the last five exports without digging through folders.", NSColor(hex: 0x8B4513)),
+    ("Recent prints in the menu bar", "Reopen the last five exports without digging through folders.", NSColor(hex: 0x8B4513)),
     ("Local-only by design", "Sandboxed settings for watcher behavior, appearance, and export size.", NSColor(hex: 0x4A4A4A))
 ]
 
@@ -74,7 +74,7 @@ func drawWindow(size: CGSize, index: Int, title: String, subtitle: String, accen
 
     rounded(CGRect(x: window.minX, y: window.maxY - 92, width: window.width, height: 92), radius: 26, color: NSColor(hex: 0xF5F2EC))
     drawTrafficLights(origin: CGPoint(x: window.minX + 40, y: window.maxY - 56))
-    drawText("Polaroid", in: CGRect(x: window.midX - 140, y: window.maxY - 62, width: 280, height: 36), size: 22, weight: .semibold, color: NSColor(hex: 0x2A2523), alignment: .center)
+    drawText("Instant Frame", in: CGRect(x: window.midX - 140, y: window.maxY - 62, width: 280, height: 36), size: 22, weight: .semibold, color: NSColor(hex: 0x2A2523), alignment: .center)
 
     drawText(title, in: CGRect(x: 320, y: 1380, width: 940, height: 70), size: 42, weight: .bold, color: NSColor(hex: 0x211B18), alignment: .left)
     drawText(subtitle, in: CGRect(x: 320, y: 1324, width: 960, height: 42), size: 24, weight: .regular, color: NSColor(hex: 0x6D625D), alignment: .left)
@@ -198,11 +198,11 @@ func drawMenuPanel(accent: NSColor) {
     let rect = CGRect(x: 1840, y: 570, width: 500, height: 500)
     shadow(rect, radius: 22, y: -8)
     rounded(rect, radius: 18, color: .white)
-    drawText("Recent Polaroids", in: CGRect(x: rect.minX + 34, y: rect.maxY - 68, width: 260, height: 32), size: 23, weight: .bold, color: NSColor(hex: 0x211B18), alignment: .left)
+    drawText("Recent Prints", in: CGRect(x: rect.minX + 34, y: rect.maxY - 68, width: 260, height: 32), size: 23, weight: .bold, color: NSColor(hex: 0x211B18), alignment: .left)
     for idx in 0..<5 {
         let rowY = rect.maxY - 132 - CGFloat(idx) * 74
         rounded(CGRect(x: rect.minX + 34, y: rowY, width: 52, height: 58), radius: 4, color: idx == 0 ? accent.withAlphaComponent(0.26) : NSColor(hex: 0xF5F2EC))
-        drawText("Polaroid \(idx + 1)", in: CGRect(x: rect.minX + 106, y: rowY + 14, width: 260, height: 28), size: 18, weight: .semibold, color: NSColor(hex: 0x211B18), alignment: .left)
+        drawText("Print \(idx + 1)", in: CGRect(x: rect.minX + 106, y: rowY + 14, width: 260, height: 28), size: 18, weight: .semibold, color: NSColor(hex: 0x211B18), alignment: .left)
     }
 }
 

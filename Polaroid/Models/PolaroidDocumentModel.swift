@@ -410,12 +410,12 @@ final class PolaroidDocumentModel {
 
     func removeRecent(_ recent: RecentPolaroid) {
         settings.recentPolaroids.removeAll { $0.id == recent.id }
-        showToast("Removed recent Polaroid")
+        showToast("Removed recent print")
     }
 
     func clearRecentPolaroids() {
         settings.recentPolaroids = []
-        showToast("Recent Polaroids cleared")
+        showToast("Recent prints cleared")
     }
 
     func revealLastExport() {
@@ -546,7 +546,7 @@ final class PolaroidDocumentModel {
     private func bringMainWindowForward() {
         openMainWindow?()
         NSApplication.shared.activate(ignoringOtherApps: true)
-        NSApplication.shared.windows.first(where: { $0.identifier?.rawValue == "main" || $0.title == "Polaroid" })?.makeKeyAndOrderFront(nil)
+        NSApplication.shared.windows.first(where: { $0.identifier?.rawValue == "main" || $0.title == "Instant Frame" })?.makeKeyAndOrderFront(nil)
     }
 
     private func suggestedCaption(for screenshot: Screenshot, source: LoadSource) -> String {
