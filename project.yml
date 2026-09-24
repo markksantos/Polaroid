@@ -35,7 +35,7 @@ targets:
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         LSApplicationCategoryType: public.app-category.graphics-design
         LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
-        NSHumanReadableCopyright: Copyright © 2026 Mark Studios. All rights reserved.
+        NSHumanReadableCopyright: Copyright © 2026 Mark Studios LLC. All rights reserved.
     entitlements:
       path: Polaroid/Polaroid.entitlements
       properties:
